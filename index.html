@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkili İletişim Atölyesi - Farklı Senaryolar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .scenario {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 5px solid #007bff;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s;
+        }
+    </style>
+    <script>
+        function loadScenario(scenarioType) {
+            let scenarioText = "";
+            switch(scenarioType) {
+                case "90days":
+                    scenarioText = `
+                        <h4>Senaryo: 90 Gün Gecikmiş Ödeme Araması</h4>
+                        <p><strong>Temsilci:</strong> Merhaba, ben Esra. Bankamızın tahsilat biriminden arıyorum. Bu görüşme hizmet kalitesi takibi amacıyla kayıt altına alınmaktadır. Ali Bey ile mi görüşüyorum?</p>
+                        <p><strong>Müşteri:</strong> Evet, buyrun.</p>
+                        <p><strong>Temsilci:</strong> Öncelikle birkaç bilgi teyidi yapmamız gerekiyor. Kredi kartınızın son dört hanesini, doğum yerinizi ve doğum tarihinizi ay gün yıl olarak alabilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Tabii, 5678 ve 10 Ocak 1975.</p>
+                        <p><strong>Temsilci:</strong> Doğum yerinizi alabilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Diyarbakır</p>
+                        <p><strong>Temsilci:</strong> Verdiğiniz doğru bilgiler için teşekkür ederim. Ali Bey, 90 gündür gecikmiş bir borcunuz var. Bu süre zarfında ödeme yapılmadığı için kredi kartınız kullanıma kapatıldı ve gecikme faizi uygulandı. Borcunuzu yapılandırarak sizi rahatlatacak bir çözüm bulmaya çalışıyoruz.</p>
+                        <p><strong>Müşteri:</strong> Bu gecikme faizleri nedir böyle? Zaten zor durumdayım, bir de faiz mi ekleniyor!</p>
+                        <p><strong>Temsilci:</strong> Anlıyorum, bu tür gecikmeler can sıkıcı olabilir. Ancak birlikte bir ödeme planı oluşturabiliriz. Kredi sicilinizin olumsuz etkilenmemesi adına süreci hızlandırmanızı öneririm. Borcu taksitlendirerek ödeme kolaylığı sağlayabiliriz. İlk adımda 4.000 TL ödeyerek başlayabilirsiniz. Bu sizin için uygun olur mu?</p>
+                        <p><strong>Müşteri:</strong> Zaten zor durumdayım, o kadar parayı hemen bulamam.</p>
+                        <p><strong>Temsilci:</strong> Bu durumda daha esnek bir yapılandırma yapabiliriz. Ödemeleri daha küçük taksitlere bölebiliriz. Sizin için ilk ödeme ne kadar uygun olur?</p>
+                        <p><strong>Müşteri:</strong> Belki 2.000 TL ay sonunda ödeyebilirim.</p>
+                        <p><strong>Temsilci:</strong> O zaman ilk ödemenizi ay sonuna planlayalım. Süreci kolaylaştırmak adına size her aşamada yardımcı olmaya devam edeceğiz. Ödeme konusunda herhangi bir sorun yaşarsanız, bizimle tekrar iletişime geçebilirsiniz. İyi günler dilerim.</p>
+                    `;
+                    break;
+                case "60days":
+                    scenarioText = `
+                        <h4>Senaryo: 60 Gün Gecikmiş Ödeme Araması</h4>
+                        <p><strong>Temsilci:</strong> Merhaba, ben Ali. Bankamızın tahsilat departmanından arıyorum. Görüşmemiz, hizmet kalitesini artırmak için kayıt altına alınmaktadır. Ali Bey ile mi görüşüyorum?</p>
+                        <p><strong>Müşteri:</strong> Evet, benim.</p>
+                        <p><strong>Temsilci:</strong> Öncelikle, sizin güvenliğiniz için birkaç bilgi teyit etmemiz gerekiyor. Kredi kartınızın son dört hanesini doğum yerinizi ve doğum tarihinizi paylaşabilir misiniz?</p>
+                        <p><strong>Müşteri:</strong> Tabii, 1234 ve 15 Haziran 1980.</p>
+                        <p><strong>Temsilci:</strong> Doğum yerinizi alabilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Lice</p>
+                        <p><strong>Temsilci:</strong> Teşekkür ederim. Ali Bey, kredi kartı borcunuzda 60 günlük bir gecikme söz konusu. Bu durumu çözmek için size yardımcı olmayı amaçlıyoruz. Ödemelerinizle ilgili bir plan oluşturabiliriz. Şu an için ödeme yapmayı düşünüyor musunuz?</p>
+                        <p><strong>Müşteri:</strong> Bu aramaları sürekli alıyorum, param olunca ödeyeceğim zaten!</p>
+                        <p><strong>Temsilci:</strong> Sizi anlıyorum, maddi durumunuzu zorlamadan bir çözüm bulmak için buradayız. Gecikme süresi uzadıkça faiz ve yasal işlemler başlayabilir, bu nedenle birlikte bir ödeme planı oluşturalım. İlk olarak, bu ay sonuna kadar bir ödeme yapabilir misiniz?</p>
+                        <p><strong>Müşteri:</strong> Belki, ama ne kadar ödemem gerekiyor?</p>
+                        <p><strong>Temsilci:</strong> Toplam gecikmiş borcunuz 10.000 TL, ancak başlangıçta en az 3.000 TL gibi bir ödeme yaparsanız, taksitlendirme ile ödeme sürecinizi daha yönetilebilir hale getirebiliriz. Bu size uygun mu?</p>
+                        <p><strong>Müşteri:</strong> 3.000 TL’yi belki ay sonunda ayarlayabilirim.</p>
+                        <p><strong>Temsilci:</strong> O zaman ay sonunda bir ödeme yapacak şekilde not alıyorum. Eğer ödeme yapamayacak duruma gelirseniz, lütfen tekrar bizimle iletişime geçin. İyi günler dilerim.</p>
+                    `;
+                    break;
+                case "creditApproval":
+                    scenarioText = `
+                        <h4>Senaryo: Kredi Kartı Başvurusunun Onayı</h4>
+                        <p><strong>Temsilci:</strong> Merhaba, ben Deniz. Bankamızın müşteri hizmetleri departmanından arıyorum. Bu görüşme hizmet kalitesini artırmak için kayıt altına alınmaktadır. Ali Bey ile mi görüşüyorum?</p>
+                        <p><strong>Müşteri:</strong> Evet, benim.</p>
+                        <p><strong>Temsilci:</strong> Öncelikle birkaç bilgi teyidi yapmamız gerekiyor. Kredi kartı başvurunuzun onaylandığını bildirmek için arıyorum. Başvurunuzu işlerken size ait olan bilgileri kontrol edelim; kredi kartınızın son dört hanesini doğum yerinizi ve doğum tarihinizi alabilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Tabii ki, son dört hanesi 5678 ve doğum tarihim 01 Şubat 1990.</p>
+                        <p><strong>Temsilci:</strong> Teşekkür ederim. Doğum yerinizi de öğrenebilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Batman.</p>
+                        <p><strong>Temsilci:</strong> Verdiğiniz doğru bilgiler için teşekkür ederim. Öncelikle tebrik ederim! Kredi kartınız 10.000 TL limit ile onaylandı. Kartınızın size ulaşması için 5-7 iş günü içerisinde adresinize gönderilecektir.</p>
+                        <p><strong>Müşteri:</strong> Harika! Peki, bu kartı nasıl kullanmalıyım?</p>
+                        <p><strong>Temsilci:</strong> Kredi kartınızı kullanırken, harcamalarınızı düzenli olarak takip etmenizi öneririm. Zamanında ödeme yapmanız, kredi notunuzu olumlu etkileyecektir. İlk ödemeniz için son tarih 15 Eylül.  Ödeme yaparken yalnızca asgari tutarı değil, mümkünse daha fazla ödeme yaparak borcunuzu azaltabilirsiniz. Herhangi bir sorunuz olursa, 7/24 müşteri hizmetlerimizle iletişime geçebilirsiniz.</p>
+                        <p><strong>Müşteri:</strong> Çok teşekkür ederim, bu bilgiler çok yardımcı oldu!</p>
+                        <p><strong>Temsilci:</strong> Rica ederim, iyi günler dilerim. Size yardımcı olmaktan memnuniyet duydum.</p>
+                    `;
+                    break;
+                case "creditDenial":
+                    scenarioText = `
+                        <h4>Senaryo: Kredi Kartı Başvurusunun Reddedilmesi</h4>
+                        <p><strong>Temsilci:</strong> Merhaba, ben Elif. Bankamızın müşteri hizmetleri departmanından arıyorum. Bu görüşme hizmet kalitesini artırmak için kayıt altına alınmaktadır. Ali Bey ile mi görüşüyorum?</p>
+                        <p><strong>Müşteri:</strong> Evet, benim.</p>
+                        <p><strong>Temsilci:</strong> Öncelikle birkaç bilgi teyidi yapmamız gerekiyor. Başvurunuzu işlerken size ait olan bonudcart'ınızın son dört hanesini doğum yerinizi ve doğum tarihinizi alabilir miyim?</p>
+                        <p><strong>Müşteri:</strong> 5688 01.01.1999.</p>
+                        <p><strong>Temsilci:</strong> Teşekkür ederim. Doğum yerinizi de öğrenebilir miyim?</p>
+                        <p><strong>Müşteri:</strong> Bismil.</p>
+                        <p><strong>Temsilci:</strong> Merhaba, Ali Bey. Kredi kartı başvurunuzla ilgili bilgi vermek için arıyorum. Maalesef başvurunuzun onaylanmadığını bildirmek zorundayım. Bunun nedenini size açıklamak istiyorum.</p>
+                        <p><strong>Müşteri:</strong> Neden? Benim tüm belgelerim eksiksizdi!</p>
+                        <p><strong>Temsilci:</strong> Anlıyorum, bu durum sizi üzdü. İnceleme sonucunda, kredi notunuzun başvurunuz için uygun olmadığını tespit ettik. Bu gibi durumlar için birçok faktör devreye girebiliyor, örneğin mevcut borçlarınız veya ödeme geçmişiniz.</p>
+                        <p><strong>Müşteri:</strong> Kredi notum neden düşük? Düşünemiyorum!</p>
+                        <p><strong>Temsilci:</strong> Anlayışınız için teşekkür ederim. Kredi notunuzla ilgili olarak, kredi kartı veya kredi ödemelerinizin zamanında yapılmaması gibi faktörler etkili olabilir. Bu durumu düzeltmek için birkaç önerim var. Geçmiş ödemelerinizi düzenli yaparak, zamanla notunuzu iyileştirebilirsiniz.</p>
+                        <p><strong>Müşteri:</strong> Ne zaman tekrar başvurabilirim?</p>
+                        <p><strong>Temsilci:</strong> En az 6 ay içinde kredi notunuzu iyileştirdikten sonra yeniden başvurabilirsiniz. Bu süreçte, finansal durumunuzu gözden geçirmenizi öneririm. Başka bir sorunuz varsa memnuniyetle yanıtlarım.</p>
+                        <p><strong>Müşteri:</strong> Tamam, teşekkür ederim. Bu süreçte bilgilendirmeye devam edeceğim.</p>
+                        <p><strong>Temsilci:</strong> Rica ederim, Ali Bey. Size yardımcı olmaktan memnuniyet duydum. İyi günler dilerim.</p>
+                    `;
+                    break;
+                default:
+                    scenarioText = "<p>Senaryo bulunamadı.</p>";
+            }
+            document.getElementById('scenario').innerHTML = scenarioText;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Etkili İletişim Atölyesi</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadScenario('90days')">90 Gün Gecikmiş Ödeme</a></li>
+                <li><a href="#" onclick="loadScenario('60days')">60 Gün Gecikmiş Ödeme</a></li>
+                <li><a href="#" onclick="loadScenario('creditApproval')">Kredi Kartı Başvurusu Onayı</a></li>
+                <li><a href="#" onclick="loadScenario('creditDenial')">Kredi Kartı Başvurusu Reddedilmesi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Senaryolar</h2>
+        <div id="scenario" class="scenario">
+            <p>Senaryoları görüntülemek için yukarıdaki bağlantılara tıklayın.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Etkili İletişim Atölyesi. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
